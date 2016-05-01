@@ -1,0 +1,13 @@
+{
+    "configs": [
+        {
+            "method": "aes-256-cfb",
+            "password": "MjQ111OTVlMj",
+            "remarks": "bandwagonhost",
+            "server": "45.78.56.223",
+            "server_port": 443
+        }
+    ],
+    "localPort": 1080,
+    "shareOverLan": false
+}
