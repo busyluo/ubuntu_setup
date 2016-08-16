@@ -32,8 +32,8 @@ echo Y | sudo apt-get install ultra-flat-icons
 unity-tweak-tool -a &
 
 #------------------------2.grub-----------------------------------
-sudo sed -i "s/^GRUB_TIMEOUT=10/GRUB_TIMEOUT=1/" /etc/default/grub
-sudo update-grub
+#sudo sed -i "s/^GRUB_TIMEOUT=10/GRUB_TIMEOUT=1/" /etc/default/grub
+#sudo update-grub
 
 
 #------------------------3.tools--------------------------------
@@ -51,8 +51,8 @@ git config --global user.email 2488091@qq.com
 
 
 #---------------------5.chrome-----------------------------------
-if [ ! -f "Flatabulous.zip" ]; then
- wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+if [ ! -f "google-chrome-stable_current_amd64.deb" ]; then
+ wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O google-chrome-stable_current_amd64.deb
 fi
 #修复依赖关系（depends）的命令
 echo Y | sudo apt-get -f install 
@@ -81,5 +81,6 @@ cp -f ../config/user-rules.txt ~/.proxypac/user-rules.txt
 
 sudo genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --output="~/.proxypac/autoproxy.pac" --gfwlist-url="https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt" --user-rule-from=~/.proxypac/user-rules.txt
 
-#System settings > Network > Network Proxy ,格式如：file:///home/xavier/.proxypac/autoproxy.pac
+echo "System settings > Network > Network Proxy ,格式如：file:///home/xavier/.proxypac/autoproxy.pac"
+echo "Complete!!!!!!!!!!!"
 
