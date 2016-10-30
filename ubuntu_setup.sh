@@ -37,7 +37,7 @@ unity-tweak-tool -a &
 
 
 #------------------------3.tools--------------------------------
-echo Y | sudo apt-get install git
+# echo Y | sudo apt-get install git
 echo Y | sudo apt-get install vim
 
 git config --global user.name "busyluo"
@@ -65,22 +65,23 @@ echo -e \\n | sudo add-apt-repository ppa:hzwhuang/ss-qt5
 sudo apt-get update
 echo Y |sudo apt-get install shadowsocks-qt5
 
-#pac
-sudo apt-get install python-pip
-sudo pip install genpac
-sudo pip install --upgrade genpac
-#gfwlist
+##pac
+#sudo apt-get install python-pip
+#sudo pip install genpac
+#sudo pip install --upgrade genpac
+##gfwlist
 mkdir ~/.proxypac
 
-if [ ! -f "../config/user-rules.txt" ]; then
- wget -c https://raw.githubusercontent.com/JinnLynn/genpac/master/genpac/res/user-rules-sample.txt -O ../config/user-rules.txt
-fi
-cp -f ../config/user-rules.txt ~/.proxypac/user-rules.txt
+#if [ ! -f "../config/user-rules.txt" ]; then
+# wget -c https://raw.githubusercontent.com/JinnLynn/genpac/master/genpac/res/user-rules-sample.txt #-O ../config/user-rules.txt
+#fi
+#cp -f ../config/user-rules.txt ~/.proxypac/user-rules.txt
 
 
 
-sudo genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --output="~/.proxypac/autoproxy.pac" --gfwlist-url="https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt" --user-rule-from=~/.proxypac/user-rules.txt
+#sudo genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --#output="~/.proxypac/autoproxy.pac" --gfwlist-url="https://autoproxy-gfwlist.googlecode.com/svn/#trunk/gfwlist.txt" --user-rule-from=~/.proxypac/user-rules.txt
 
+echo "copy pac file from windows to ~/.proxypac/"
 echo "System settings > Network > Network Proxy ,格式如：file:///home/xavier/.proxypac/autoproxy.pac"
 echo "Complete!!!!!!!!!!!"
 
